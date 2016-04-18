@@ -98,6 +98,7 @@ $(document).ready(() => {
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
     let dropZone = $('.drop_zone')[0];
+    console.log("Dropzone:"+dropZone);
     dropZone.addEventListener('dragover', handleDragOver, false);
     dropZone.addEventListener('drop', handleDragFileSelect, false);
     let inputFile = $('.inputfile')[0];
