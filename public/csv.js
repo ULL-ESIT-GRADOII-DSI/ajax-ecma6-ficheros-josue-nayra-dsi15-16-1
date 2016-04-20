@@ -91,6 +91,9 @@ $(document).ready(() => {
     });
     /* botones para rellenar el textarea */
     /*dump --> vuelca el contenido del fichero y recibe como argumento el nombre del fichero*/
+    
+    /*`${$(y).text()}.txt` --> texto ECMA6 (comillas)*/
+    
     $('button.example').each( (_,y) => {
       $(y).click( () => { dump(`${$(y).text()}.txt`); });
     });
@@ -98,7 +101,9 @@ $(document).ready(() => {
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
     let dropZone = $('.drop_zone')[0];
+    console.log("Dropzone:"+dropZone);
     dropZone.addEventListener('dragover', handleDragOver, false);
+    
     dropZone.addEventListener('drop', handleDragFileSelect, false);
     let inputFile = $('.inputfile')[0];
     inputFile.addEventListener('change', handleFileSelect, false);
